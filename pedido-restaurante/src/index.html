@@ -6,8 +6,39 @@
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      text-align: center;
+      background-color: #fefefe;
+    }
+
+    .banner {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 20px;
+    }
+
+    .banner img {
+      width: 200px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+    }
+  </style>
 </head>
 <body>
+  <h1>🍽️ Bienvenido a Pedido Restaurante</h1>
+  <div class="banner">
+    <img src="assets/img/helado.png" alt="Paella">
+    <img src="assets/img/hamburguesa.png" alt="Café">
+    <img src="assets/img/pastaConTomate.png" alt="Postre">
+  </div>
+
   <app-root></app-root>
 </body>
 </html>
+
