@@ -136,6 +136,7 @@
   },
   "defaultProject": "pedido-restaurante",
   "cli": {
-    "analytics": "d7b2c3cc-9bb2-498f-862e-857ab4a2ef4e"
+    "analytics": false
   }
 }
+
