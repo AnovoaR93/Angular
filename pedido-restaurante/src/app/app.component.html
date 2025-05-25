@@ -1,0 +1,74 @@
+<div class="app-container">
+  <header>
+    <h1>🍽️ Menú del Restaurante</h1>
+    <p>¡Agrega tus platos favoritos, visualiza tu pedido y consulta el total!</p>
+  </header>
+
+  <section class="menu-form-section">
+    <app-menu-form (nuevoPlato)="onNuevoPlato($event)"></app-menu-form>
+  </section>
+
+  <section class="pedido-section">
+    <h2>📝 Pedido Actual</h2>
+    <app-pedido-list></app-pedido-list>
+  </section>
+
+  <section class="cuenta-section">
+    <h2>💵 Total a Pagar</h2>
+    <app-cuenta></app-cuenta>
+  </section>
+</div>
+
+<style>
+  .app-container {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: linear-gradient(135deg, #fff 60%, #ffe0f7 100%);
+    border-radius: 1.5rem;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.12);
+    font-family: 'Segoe UI', 'Inter', Arial, sans-serif;
+  }
+  header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  header h1 {
+    font-size: 2.5rem;
+    color: #c2185b;
+    margin-bottom: 0.5rem;
+    letter-spacing: -1px;
+  }
+  header p {
+    color: #6d4c41;
+    font-size: 1.1rem;
+    margin: 0;
+  }
+  .menu-form-section,
+  .pedido-section,
+  .cuenta-section {
+    margin-bottom: 2rem;
+    padding: 1.5rem 1rem;
+    background: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 2px 8px 0 rgba(194, 24, 91, 0.06);
+  }
+  .pedido-section h2,
+  .cuenta-section h2 {
+    color: #7b1fa2;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+    letter-spacing: -0.5px;
+  }
+  @media (max-width: 700px) {
+    .app-container {
+      padding: 0.5rem;
+    }
+    .menu-form-section,
+    .pedido-section,
+    .cuenta-section {
+      padding: 1rem 0.5rem;
+    }
+  }
+</style>

@@ -1,0 +1,16 @@
+<div *ngIf="platos.length === 0">
+  <p>No hay platos en el pedido.</p>
+</div>
+<ul *ngIf="platos.length > 0">
+  <li *ngFor="let plato of platos; let i = index">
+    <span [style.text-decoration]="plato.consumido ? 'line-through' : 'none'">
+      {{ plato.nombre }} - {{ plato.tipo }} - ${{ plato.precio }}
+    </span>
+    <button (click)="marcarComoConsumido(i)" [disabled]="plato.consumido">
+      Marcar como consumido
+    </button>
+    <button (click)="eliminarPlato(i)">
+      Eliminar
+    </button>
+  </li>
+</ul>

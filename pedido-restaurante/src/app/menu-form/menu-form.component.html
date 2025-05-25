@@ -1,0 +1,39 @@
+<p>menu-form works!</p>
+<form (ngSubmit)="agregarPlato()" #platoForm="ngForm">
+  <div>
+    <label for="nombre">Nombre:</label>
+    <input id="nombre" name="nombre" [(ngModel)]="nombre" required />
+  </div>
+  <div>
+    <label for="tipo">Tipo:</label>
+    <select id="tipo" name="tipo" [(ngModel)]="tipo">
+      <option value="Plato Principal">Plato Principal</option>
+      <option value="Entrada">Entrada</option>
+      <option value="Postre">Postre</option>
+      <option value="Bebida">Bebida</option>
+    </select>
+  </div>
+  <div>
+    <label for="descripcion">Descripción:</label>
+    <textarea id="descripcion" name="descripcion" [(ngModel)]="descripcion"></textarea>
+  </div>
+  <div>
+    <label for="precio">Precio:</label>
+    <input id="precio" name="precio" type="number" [(ngModel)]="precio" required min="0" />
+  </div>
+  <div>
+    <label for="imagenUrl">Imagen URL:</label>
+    <input id="imagenUrl" name="imagenUrl" [(ngModel)]="imagenUrl" />
+  </div>
+  <div>
+    <label for="categoria">Categoría:</label>
+    <input id="categoria" name="categoria" [(ngModel)]="categoria" />
+  </div>
+  <div>
+    <label>
+      <input type="checkbox" name="disponible" [(ngModel)]="disponible" />
+      Disponible
+    </label>
+  </div>
+  <button type="submit" [disabled]="platoForm.invalid">Agregar Plato</button>
+</form>
